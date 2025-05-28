@@ -7,8 +7,8 @@ fun main() {
     machine.addCoffeeMold(800f)
 
     val drink = machine
-        .requestACoffee(2000f)
-        .chooseACoffee(CoffeeChoice.ESPRESSO)
+        .requestACoffee(money = 2000f)
+        .chooseACoffee(choice = CoffeeChoice.ESPRESSO)
         .get()
 
     println(drink)
