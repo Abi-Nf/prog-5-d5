@@ -9,7 +9,7 @@ class CoffeeRequest internal constructor(
     companion object {
         private const val PRICE_FOR_COFFEE = 2000f
 
-        fun simulatePreparation() {
+        private fun simulatePreparation() {
             Thread.sleep(5000)
         }
     }
