@@ -6,7 +6,7 @@ class CoffeeMachine {
     private var currentCoffeeMold: Float = 0f
 
     fun requestACoffee(money: Float): CoffeeRequest {
-        return CoffeeRequest(money, ::request)
+        return CoffeeRequest(money, ::requestAVariety)
     }
 
     fun addWater(capacity: Float) {
@@ -21,7 +21,7 @@ class CoffeeMachine {
         this.coffeeCups += number
     }
 
-    private fun request(variety: CoffeeVariety) {
+    private fun requestAVariety(variety: CoffeeVariety) {
         if ((currentWaterCapacity - variety.waterQuantity) <= 0) {
             throw CoffeeMachineException("Not enough water for a drink")
         }
